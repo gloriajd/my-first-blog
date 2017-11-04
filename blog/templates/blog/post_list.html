@@ -2,7 +2,7 @@
   <head>
     <title>Glorias Blog</title>
   </head>
-  <body><div>
+  <body>
   <h1>Django Workshop</h1>
   <h2>Anleitung für eine Website</h2>
     <p>Hallo, heute lernen wir eine Website zu erstellen.</p>
@@ -10,7 +10,17 @@
     <strong> that's really cool! </strong>
     <p>It works!</p>
     <a href="https://tutorial.djangogirls.org/en/html/">Hier ist die Anleitung</a>
-    <ul><li>Start: 9:30 Uhr</li><li>Pause: 13.00 Uhr</li><li>Ende: 17 Uhr</li></div>
+    <ul><li>Start: 9:30 Uhr</li><li>Pause: 13.00 Uhr</li><li>Ende: 17 Uhr</li>
+
+      <div>
+        <h1><a href="/">Django Girls Blog</a></h1>
+      </div>
+        {% for post in posts %}
+        <div>
+          <p>published: {{ post.published_date }}</p>
+          <h1>{{ post.text|linebreaksbr }}</p>
+        </div>
+      {% endfor %} 
 
   <!--<div>
             <h1><a href="/">Django Girls Blog</a></h1>
